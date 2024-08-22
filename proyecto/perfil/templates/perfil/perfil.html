@@ -1,0 +1,22 @@
+{% extends 'usuario/base.html' %}
+
+{% block title %}Perfil{% endblock %}
+
+{% block content %}
+<div class="container" style="display: flex;">
+    <div style="flex: 1; padding: 10px; background-color: lightblue;">
+    <h2>Perfil de Usuario</h2>
+    <p><strong>Nombre de Usuario:</strong> {{ profile.user.username }}</p>
+    <p><strong>Correo Electrónico:</strong> {{ profile.user.email }}</p>
+    <p><strong>Biografia:</strong> {{ profile.bio }}</p>
+    <p><strong>genero:</strong> {{ profile.gender }}</p>
+    <p><strong>Pais:</strong> {{ profile.country }}</p>
+    <a href="{% url 'perfil:editar_perfil' %}" class="btn btn-primary">Editar Perfil</a>
+    </div>
+
+    <div style="flex: 1; padding: 10px; background-color: lightblue;">
+    <div>
+    <img src="{{ profile.photo.url }}" alt="Imagen de Perfil" style="width: 200px; height: 200px;">
+    </div>
+</div>
+{% endblock %}

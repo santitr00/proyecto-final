@@ -1,0 +1,18 @@
+{% extends 'usuario/base.html' %}
+
+{% block title %}¡Bienvenido al registro de usuario!{% endblock %}
+
+{% block content %}
+<div class="container text-center mt-5">
+    <h1 class="mb-4 display-4">Bienvenido a la gestión de Miblog</h1>
+    <h2 class="mb-4 lead">¿Deseas iniciar sesión o crear una cuenta nueva?</h2>
+    <div class="d-flex justify-content-center">
+        <a href="{% url 'inicio_sesion' %}" class="btn btn-primary btn-lg mx-2 shadow-lg" role="button" aria-pressed="true">
+            Iniciar Sesión
+        </a>
+        <a href="{% url 'registro' %}" class="btn btn-secondary btn-lg mx-2 shadow-lg" role="button" aria-pressed="true">
+            Registrarse
+        </a>
+    </div>
+</div>
+{% endblock %}
